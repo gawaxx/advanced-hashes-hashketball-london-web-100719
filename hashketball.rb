@@ -136,7 +136,7 @@ def game_hash
 end
 
 def num_points_scored(name)
-  theHash.each { |location, key1| key1[:players].each { |player, key2|
+  theHash.each { |location, item| item[:players].each { |player, item2|
 
       if player.keys[0].to_s == name
         return player.values[0][:points]
