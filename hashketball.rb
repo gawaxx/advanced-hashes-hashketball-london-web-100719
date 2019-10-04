@@ -166,8 +166,7 @@ end
 
 def team_names()
   game_hash.each {|location, team_info|
-    i=0
-    while i < :team_name
+    
   }
 end
 
