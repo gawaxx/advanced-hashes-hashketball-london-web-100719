@@ -2,7 +2,7 @@
 
 def theHash
 
-  theHash = {
+  dataHash = {
 
     home: {
 
