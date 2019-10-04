@@ -2,7 +2,7 @@
 
 def theHash
 
-  data_Hash = {
+  game_hash = {
 
     home: {
 
@@ -132,7 +132,7 @@ def theHash
       ]
     }
   }
-  return data_Hash
+  return game_hash
 end
 
 def num_points_scored(name)
