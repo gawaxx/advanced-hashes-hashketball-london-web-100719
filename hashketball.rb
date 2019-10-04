@@ -234,7 +234,7 @@ def most_points_scored
     }
   }
 
-  game_hash[player_location][:players].each { |player, player_info|
+  game_hash[player_location][:players].each {|player, player_info|
 
     if player.values[0][:points] == most_points
       return player.keys[0].to_s
@@ -244,9 +244,8 @@ end
 
 def winning_team
   winning_team = {}
-  game_hash.each { |location, team_info| winning_team[team_info[:team_name].to_sym] = 0
+  game_hash.each {|location, team_info| winning_team[team_info[:team_name].to_sym] = 0
     team_info[:players].each { |player, player_info|
-
       winning_team[team_info[:team_name].to_sym] += player.values[0][:points]
     }
   }
