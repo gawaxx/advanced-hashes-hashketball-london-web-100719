@@ -117,7 +117,8 @@ def game_hash
           steals: 1,
           blocks: 1,
           slam_dunks: 0
-        }},
+          }
+        },
 
         {"Kemba Walker": {
           number: 33,
@@ -171,6 +172,7 @@ def team_names()
   }
   return teamarray
 end
+
 
 
 
