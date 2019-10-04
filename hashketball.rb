@@ -259,20 +259,16 @@ end
 #Super Bonus 
 
 def long_name_steals_a_ton?
-  name = player_with_longest_name().to_sym
+  long_name = player_with_longest_name().to_sym
   stealing = false
-  game_hash.each do |location, team_data|
-    team_data[:players].each do |player, player_data|
-      if player.keys[0] == name && player.values[0][:steals] > 10
+  game_hash.each { |location, team_info|
+    team_info[:players].each { |player, player_info|
+      if player.keys[0] == long_name && player.values[0][:steals] > 10
         stealing = true
       end
-    end
-
-  end
-
+    }
+  }
   return stealing
-
-end  
 end  
 
 
