@@ -136,7 +136,7 @@ def game_hash
 end
 
 def num_points_scored(player_name)
-  game_hash.each { |location, team| team[:players].each { |player, player_info|
+  game_hash.each { |location, team_info| team_info[:players].each { |player, player_info|
 
       if player.keys[0].to_s.eql? player_name
         return player.values[0][:points]
@@ -146,7 +146,7 @@ def num_points_scored(player_name)
 end
 
 def shoe_size(player_name)
-  game_hash.each { |location, team| team[:players].each {|player, player_info| 
+  game_hash.each { |location, team_info| team_info[:players].each {|player, player_info| 
     
     if player.keys[0].to_s.eql? player_name
       return player.values[0][:shoe]
@@ -156,12 +156,30 @@ def shoe_size(player_name)
 end
 
 def team_colors(team_name)
-  game_hash.each {|location, team|
+  game_hash.each {|location, team_info|
    
-   if team[:team_name].eql? team_name
-     return team[:colors]
+   if team_info[:team_name].eql? team_name
+     return team_info[:colors]
     end
   }
 end
+
+def team_names()
+  game_hash.each {|location, team_info|
+    i=0
+    while i < :team_name
+  }
+end
+
+
+
+
+
+
+
+
+
+
+
 
 
