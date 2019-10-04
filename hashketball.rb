@@ -158,8 +158,8 @@ end
 def team_colors(team_name)
   game_hash.each {|location, team|
    
-   if team.keys[0].to_s.eql? team_name
-     return team.[:colors]
+   if team[:team_name].eql? team_name
+     return team[:colors]
     end
   }
 end
