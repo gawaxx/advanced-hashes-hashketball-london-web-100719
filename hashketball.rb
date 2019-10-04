@@ -196,9 +196,7 @@ end
 
 def player_stats(player_name)
   game_hash.each { |location, team_info| team_info[:players].each {|player, player_info 
-    if name == player.keys[0].to_s
-      return player.values[0]
-    end
+ 
     }
   }
 end 
@@ -207,10 +205,25 @@ def big_shoe_rebounds
 
 end
 
+#Bonus
+
 def most_points_scored
   
 end
 
+def winning_team
+  
+end 
+
+def player_with_longest_name
+  
+end 
+
+#Super Bonus 
+
+def long_name_steals_a_ton?
+  
+end  
 
 
 
