@@ -194,9 +194,9 @@ def player_numbers(team_name)
   return teamnumbers
 end
 
-def player_stats(player_name)
-  game_hash.each { |location, team_info| team_info[:players].each {|player, player_info}}
-end 
+#def player_stats(player_name)
+  #game_hash.each { |location, team_info| team_info[:players].each {|player, #layer_info}}
+#end 
 
 def big_shoe_rebounds
 
