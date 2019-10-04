@@ -255,8 +255,7 @@ end
 def player_with_longest_name
   player_name_length = 0
   player_name = ""
-  game_hash.each { |location, team_info|
-    team_info[:players].each { |player, player_info|
+  game_hash.each { |location, team_info| team_info[:players].each { |player, player_info|
       if player.keys[0].to_s.length > player_name_length
         player_name_length = player.keys[0].to_s.length
         player_name = player.keys[0].to_s
@@ -269,8 +268,7 @@ end
 def long_name_steals_a_ton?
   player_name = player_with_longest_name().to_sym
   stealing = false
-  game_hash.each { |location, team_info|
-    team_info[:players].each { |player, player_info|
+  game_hash.each { |location, team_info| team_info[:players].each { |player, player_info|
       if player.keys[0] == player_name && player.values[0][:steals] > 10
         stealing = true
       end
