@@ -184,7 +184,7 @@ end
 
 def player_numbers(team_name)
   teamnumbers = []
-  game_hash.each {|location, team_info| team_info[:players].each {|player, player_info|
+  game_hash.each {|location, team_info| team_info[:players].each if  {|player, player_info|
     teamnumbers.push(player.values[0][:number])
     }
   }
