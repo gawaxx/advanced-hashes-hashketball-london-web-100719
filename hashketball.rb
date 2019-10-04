@@ -227,7 +227,7 @@ def most_points_scored
   player_location = []
   game_hash.each { |location, team_info| team_info[:players].each { |player, player_info|
 
-      if player.values[0][:points] > most_points
+      if player.values[0[:points] > most_points
         most_points = player.values[0][:points]
         player_location = location
       end
@@ -241,23 +241,6 @@ def most_points_scored
     end
   }
 end
-
-def winning_team
-  
-end 
-
-def player_with_longest_name
-  
-end 
-
-#Super Bonus 
-
-def long_name_steals_a_ton?
-  
-end  
-
-
-
 
 
 
