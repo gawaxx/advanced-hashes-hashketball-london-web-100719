@@ -196,7 +196,9 @@ end
 
 def player_stats(player_name)
   game_hash.each { |location, team_info| team_info[:players].each {|player, player_info 
-    unless team_info[:team_name]!=team_name
+    if name == player.keys[0].to_s
+      return player.values[0]
+    end
     }
   }
 end 
