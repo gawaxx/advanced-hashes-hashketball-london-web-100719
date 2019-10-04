@@ -155,5 +155,13 @@ def shoe_size(player_name)
   }
 end
 
+def team_colors(team_name)
+  game_hash.each {|location, team|
+   
+   if team.keys[1].to_s.eql? team_name
+     return team.values[1][:colors]
+    end
+  }
+end
 
 
