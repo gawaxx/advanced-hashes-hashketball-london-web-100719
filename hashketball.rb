@@ -205,13 +205,13 @@ end
 
 def big_shoe_rebounds
   largest_size = 0
-  game_hash.each { |location, team_data| team_data[:players].each { |player, player_data|
+  game_hash.each { |location, team_info| team_info[:players].each { |player, player_info|
 
       if player.values[0][:shoe] > largest_size
         largest_size = player.values[0][:shoe]
       end
     }
-    team_data[:players].each { |player, player_data|
+    team_info[:players].each { |player, player_info|
 
       if player.values[0][:shoe] == largest_size
         return player.values[0][:rebounds]
@@ -223,7 +223,23 @@ end
 #Bonus
 
 def most_points_scored
-  
+ most_points = 0
+  player_location = []
+  game_hash.each { |location, team_info| team_info[:players].each { |player, player_info|
+
+      if player.values[0][:points] > most_points
+        most_points = player.values[0][:points]
+        player_location = location
+      end
+    }
+  }
+
+  game_hash[player_location][:players].each { |player, player_info|
+
+    if player.values[0][:points] == most_points
+      return player.keys[0].to_s
+    end
+  }
 end
 
 def winning_team
