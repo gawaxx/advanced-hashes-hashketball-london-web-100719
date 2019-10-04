@@ -222,23 +222,23 @@ end
 
 #Bonus
 
-#def most_points_scored
+def most_points_scored
   
-#end
+end
 
-#def winning_team
+def winning_team
   
-#end 
+end 
 
-#def player_with_longest_name
+def player_with_longest_name
   
-#end 
+end 
 
 #Super Bonus 
 
-#def long_name_steals_a_ton?
+def long_name_steals_a_ton?
   
-#end  
+end  
 
 
 
