@@ -190,7 +190,7 @@ def player_numbers(team_name)
       
       team_info[:players].each {|player, player_info|
       
-      teamnumbers.push(player.values[0][:number])
+        teamnumbers.push(player.values[0][:number])
     }
   }
   return teamnumbers
