@@ -1,6 +1,6 @@
 # Write your code here!
 
-def theHash
+def game_hash
 
   game_hash = {
 
