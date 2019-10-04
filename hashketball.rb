@@ -253,51 +253,30 @@ def winning_team
 end 
 
 def player_with_longest_name
-
   name_length = 0
   name = ""
-
   game_hash.each do |location, team_data|
-
     team_data[:players].each do |player, player_data|
-
       if player.keys[0].to_s.length > name_length
-
         name_length = player.keys[0].to_s.length
         name = player.keys[0].to_s
-
       end
-
     end
-
   end
-
   return name
-
 end
 
 def long_name_steals_a_ton?
-
   name = player_with_longest_name().to_sym
-
   stealing = false
-
   game_hash.each do |location, team_data|
-
     team_data[:players].each do |player, player_data|
-
       if player.keys[0] == name && player.values[0][:steals] > 10
-
         stealing = true
-
       end
-
     end
-
   end
-
   return stealing
-
 end
 
 
