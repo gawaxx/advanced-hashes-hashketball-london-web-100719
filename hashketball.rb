@@ -199,7 +199,8 @@ def player_stats(player_name)
     if player.keys[0].to_s == player_name
       return player.values[0]
     end
-  }}
+    }
+  }
 end 
 
 def big_shoe_rebounds
