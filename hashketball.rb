@@ -150,8 +150,9 @@ def shoe_size(player_name)
     
     if player.keys[1].to_s == player_name
       return player.values[1][:shoe]
-    
-  } }
+    end
+    } 
+  }
 end
 
 
